@@ -32,9 +32,9 @@ This project is an online bookstore API built using FastAPI and MongoDB. It allo
 <h2> Usage </h2>
 
     Start the API server:
-    uvicorn main:app --reload
+    uvicorn main:app --port 8090 --reload  
 
-    Access the API documentation in your browser at http://localhost:8000/docs.
+    Access the API documentation in your browser at http://localhost:8090/docs.
 
 <h2> API Endpoints </h2> 
     
