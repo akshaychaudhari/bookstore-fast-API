@@ -27,12 +27,18 @@ This project is an online bookstore API built using FastAPI and MongoDB. It allo
     Install the required dependencies:
     pip install -r requirements.txt
 
-    Configure the MongoDB connection settings in config.py.
+    Configure the MongoDB connection settings in api_constants.py.
+
+<h3> Commands for virtual environment </h3>
+
+    python3 -m venv venv --system-site-packages
+    source venv/bin/activate
+    deactivate
 
 <h2> Usage </h2>
 
     Start the API server:
-    uvicorn main:app --port 8090 --reload  
+    python3 -m uvicorn main:app --port 8090 --reload  
 
     Access the API documentation in your browser at http://localhost:8090/docs.
 
@@ -58,8 +64,7 @@ This project is an online bookstore API built using FastAPI and MongoDB. It allo
     
     Deletes a book from the store by ID.
     
-    GET /search?title={}&author={}&min_price={}&
-    max_price={}
+    GET /search?title={}&author={}&min_price={}&max_price={}
     
     Searches for books by title, author, and price range.
 
@@ -78,10 +83,12 @@ The book data model includes the following fields:
     The API establishes an asynchronous connection to MongoDB using PyMongo.
     Data Validation
     
-    Pydantic is used to validate the incoming book data before it is stored in MongoDB. The API returns an appropriate error message if the data fails validation.
-    Aggregation
+    Pydantic is used to validate the incoming book data before it is stored in MongoDB. 
+    The API returns an appropriate error message if the data fails validation.
+    
+<h2> Aggregation </h2>
 
-The API uses MongoDB's aggregation framework to retrieve the following data:
+    The API uses MongoDB's aggregation framework to retrieve the following data:
 
     The total number of books in the store.
     The top 5 bestselling books.
