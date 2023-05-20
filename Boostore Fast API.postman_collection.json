@@ -1,0 +1,395 @@
+{
+	"info": {
+		"_postman_id": "e1d496cf-150e-422c-b517-ad5e1e334306",
+		"name": "Boostore Fast API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24717294"
+	},
+	"item": [
+		{
+			"name": "Create a Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n    \"title\": \"The New Great Gatsby Part3\",\n    \"author\": \"F. Scott Fitzgerald\",\n    \"description\": \"The Great Gatsby is a novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, the novel depicts narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite with his former lover, Daisy Buchanan.\",\n    \"price\": 12.99,\n    \"stock\": 10\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8090/books",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Book Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n    \"title\": \"THREE\",\n    \"author\": \"F.ARC\",\n    \"description\": \"TheOne\",\n    \"price\": 99.99,\n    \"stock\": 1\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8090/books",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create 3 books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"title\": \"The Catcher in the Rye\",\n    \"author\": \"J.D. Salinger\",\n    \"description\": \"A coming-of-age novel about teenage rebellion and alienation.\",\n    \"price\": 8.99,\n    \"stock\": 10\n  },\n  {\n    \"title\": \"Pride and Prejudice\",\n    \"author\": \"Jane Austen\",\n    \"description\": \"A classic romance novel set in 19th-century England.\",\n    \"price\": 9.99,\n    \"stock\": 12\n  },\n  {\n    \"title\": \"The Lord of the Rings\",\n    \"author\": \"J.R.R. Tolkien\",\n    \"description\": \"An epic fantasy trilogy about the battle between good and evil.\",\n    \"price\": 15.99,\n    \"stock\": 8\n  }\n]\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8090/books",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8090/books",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Book By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8090/books/6468698c95826182ac813502",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"books",
+						"6468698c95826182ac813502"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE a book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Pride and Prejudice\",\n    \"author\": \"Jane Austen\",\n    \"description\": \"A classic romance novel set in 19th-century England.\",\n    \"price\": 19.99,\n    \"stock\": 15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8090/books/6468423fed7c6f54fc50db79",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"books",
+						"6468423fed7c6f54fc50db79"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE a book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Pride and Prejudice\",\n    \"author\": \"Jane Austen\",\n    \"description\": \"A classic romance novel set in 19th-century England.\",\n    \"price\": 19.99,\n    \"stock\": 12\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8090/books/6468431d9e632818192ed81d",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"books",
+						"6468431d9e632818192ed81d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search a Book By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8090/books/6468431d9e632818192ed81e/search?title=Harry%20Potter&author=J.K.%20Rowling&min_price=10.0&max_price=20.0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"books",
+						"6468431d9e632818192ed81e",
+						"search"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Harry%20Potter"
+						},
+						{
+							"key": "author",
+							"value": "J.K.%20Rowling"
+						},
+						{
+							"key": "min_price",
+							"value": "10.0"
+						},
+						{
+							"key": "max_price",
+							"value": "20.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search a Book By Id 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8090/search?title=The New Great Gatsby",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "F.ARC",
+							"disabled": true
+						},
+						{
+							"key": "min_price",
+							"value": "10.0",
+							"disabled": true
+						},
+						{
+							"key": "max_price",
+							"value": "20.0",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "The New Great Gatsby"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search with index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8090/search-with-index?title=ONE&author=F.ARC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"search-with-index"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "ONE"
+						},
+						{
+							"key": "author",
+							"value": "F.ARC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Books Count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8090/count",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top authors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8090/top-authors",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"top-authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bestsellers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8090/bestsellers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"bestsellers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
